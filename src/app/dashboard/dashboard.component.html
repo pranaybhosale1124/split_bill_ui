@@ -1,0 +1,60 @@
+<div class="main-container">
+    <div class="parent-borders">
+        <div class="cards-container">
+            <app-card></app-card>
+            <app-card></app-card>
+            <app-card></app-card>
+        </div>
+    </div>
+    <!--  -->
+    <div class="recent-items-container parent-borders">
+        <h4>Recently Split Bills</h4>
+        <div class="container mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Group name</th>
+                        <th scope="col">Members</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Group 1</td>
+                        <td>John, Jane, Alex</td>
+                        <td>2022-02-15</td>
+                        <td>$500.00</td>
+                        <td>
+                            <mat-icon class="text-primary">edit</mat-icon>
+                            <mat-icon class="text-danger">delete</mat-icon>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Group 2</td>
+                        <td>Sara, Mike, Tom</td>
+                        <td>2022-02-18</td>
+                        <td>$750.00</td>
+                        <td>
+                            <mat-icon class="text-primary">edit</mat-icon>
+                            <mat-icon class="text-danger">delete</mat-icon>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="parent-borders">
+        <mat-tab-group>
+            <mat-tab label="Owe Me">
+                <app-owe-me></app-owe-me>
+            </mat-tab>
+            <mat-tab label="Owe To">
+                <app-owe-to></app-owe-to>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

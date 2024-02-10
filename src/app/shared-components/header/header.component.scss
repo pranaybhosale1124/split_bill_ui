@@ -1,0 +1,19 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    // Optional: Adjust spacing or other styles based on your design
+    padding: 0 16px;
+  }
+  
+  mat-nav-list {
+    display: flex;
+    gap: 16px;  // Optional: Adjust the gap between items
+  }
+
+  .header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
