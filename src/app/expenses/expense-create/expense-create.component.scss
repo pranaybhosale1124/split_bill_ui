@@ -1,0 +1,26 @@
+
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fill-available;
+  flex-direction: column;
+
+}
+
+.add-buttons {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.split-amount {
+  width: 100px;
+  float: right;
+}
+
+.add-contact-button{
+  float: right;
+}

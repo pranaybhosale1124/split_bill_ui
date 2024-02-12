@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="search-div">
+    <mat-form-field class="example-form-field search-div">
+      <input  class="search-div" matInput type="text" [(ngModel)]="searchText">
+      <span class="search-close-icons" matSuffix (click)="clearSearch()">
+        <mat-icon *ngIf="searchText!=''">close</mat-icon>
+        <mat-icon *ngIf="searchText==''">search</mat-icon>
+      </span>
+    </mat-form-field>
+  </div>
+  <h2>Contact List</h2>
+  <ul class="contact-list">
+    <li *ngFor="let contact of data.contacts | appFilter: searchText" (click)="onContactSelect(contact)">
+      <mat-icon class="profile-icon">account_circle</mat-icon>
+      <div class="contact-details">
+        <div class="user-name">{{ contact.user_name }}</div>
+        <div class="contact-number">{{ contact.user_contact_number }}</div>
+      </div>
+    </li>
+  </ul>
+
+</div>

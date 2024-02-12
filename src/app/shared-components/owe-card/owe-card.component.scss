@@ -1,6 +1,6 @@
 .example-card {
     width: 30%;
-    min-width: 50px;
+    min-width: 200px;
     margin: 1%;
     display: inline-block;
 }
@@ -18,3 +18,7 @@
     text-align: left;
 }
 
+.chip-container{
+    margin-left: 10px;
+    // background-color: red;
+}

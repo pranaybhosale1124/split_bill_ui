@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Expense Name" [(ngModel)]="data.expenseName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Total Amount" [(ngModel)]="data.totalAmount">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

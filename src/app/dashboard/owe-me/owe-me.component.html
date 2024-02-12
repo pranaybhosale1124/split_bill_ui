@@ -1,5 +1,10 @@
+<!-- owe-me.component.html -->
+
 <div class="cards-container">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-</div>
+    <div class="owe-me-main">
+        <ng-container *ngFor="let expense of expenses">
+            <app-owe-card [expense]="expense"></app-owe-card>
+          </ng-container>
+    </div>
+  </div>
+  

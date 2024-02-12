@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-owe-to',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./owe-to.component.scss']
 })
 export class OweToComponent {
-
+  @Input() expenses: any;
 }

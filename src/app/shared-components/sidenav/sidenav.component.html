@@ -1,7 +1,7 @@
 <!-- sidenav-bar.component.html -->
-<app-header (click)="drawer.toggle()"></app-header>
-<mat-drawer-container class="sidenav-container" [hasBackdrop]="true">
-  <mat-drawer #drawer [mode]="'over'">
+<app-header [sidenavToggleBtn]="sidenavToggleBtn" (changeSideNavState)="handleSideNavState()"></app-header>
+<mat-drawer-container class="sidenav-container" >
+  <mat-drawer #drawer [mode]="sidenavMode" [opened]="isSidenavOpened">
     <mat-nav-list>
       <a mat-list-item routerLink="/dashboard">
         <mat-icon>dashboard</mat-icon>
@@ -28,6 +28,8 @@
 
   <mat-drawer-content>
     <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
-    <router-outlet></router-outlet>
+    <div style="width: 100%;">
+      <router-outlet></router-outlet>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -1,0 +1,67 @@
+<!-- expense-all.component.html -->
+
+<div class="main">
+    <ng-container *ngFor="let group of groups">
+        <mat-card class="group-expense-card">
+
+            <div class="group-details">
+                <mat-card-subtitle>{{ group.group_name }}</mat-card-subtitle>
+                <div class="group-expense-count">Total Expenses : {{ group.group_expense_count }}</div>
+            </div>
+            <mat-card-title>{{ group.group_total_amount | currency:"INR" }}</mat-card-title>
+
+
+            <ng-container *ngFor="let expense of group.expenses">
+                <mat-expansion-panel class="expense-expansion-panel">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <div class="expense-details">
+                                <mat-card-subtitle>
+                                    <div class="expense-name">{{ expense.expense_name | lowercase }}</div>
+                                </mat-card-subtitle>
+                                <div class="expense-amount">{{ expense.expense_total_amount | currency :'INR' }}</div>
+                                <div class="expense-dates">
+                                    <div class="expense-created-date">{{ expense.expense_created_date | date }}
+                                    </div>
+                                    <!-- <div class="expense-settled-date" *ngIf="expense.expense_settled_date">
+                                            Settled : {{ expense.expense_settled_date | date }}
+                                        </div> -->
+                                </div>
+                            </div>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <div class="user-details-table" *ngIf="expense.expense_users && expense.expense_users.length > 0">
+                        <div class="table-responsive ">
+                            <table class="table">
+                                <!-- <thead>
+                                    <tr>
+                                        <th>User Name</th>
+                                        <th>Amount</th>
+                                        </tr>
+                                </thead> -->
+                                <tbody>
+                                    <tr *ngFor="let user of expense.expense_users">
+                                        <td>{{ user.user.user_name }}</td>
+                                        <td>{{ user.amount }}</td>
+                                        <!-- Add more columns as needed -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div>
+                            <button class="view-details-button" mat-button color="primary"
+                                (click)="viewDetails(expense)">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="no-users-message" *ngIf="!expense.expense_users || expense.expense_users.length === 0">
+                        No users available for this expense.
+                    </div>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-card>
+    </ng-container>
+</div>

@@ -11,5 +11,7 @@ mat-drawer-content {
 }
 
 mat-drawer{
-    // width: 20%;
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
 }

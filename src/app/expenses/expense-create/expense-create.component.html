@@ -1,0 +1,56 @@
+<div class="main">
+
+  <!-- <div class="group-input">
+    <h2>Create Expense</h2>
+
+    <mat-form-field class="group-input">
+      <input matInput placeholder="Group Name (Optional)">
+    </mat-form-field>
+  </div> -->
+ 
+  <div class="container">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let expense of expenses; let i = index" expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ expense.expenseName }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ expense.totalAmount | currency:'INR'}}
+          </mat-panel-description>
+          <button mat-icon-button (click)="openExpenseDialog(i,'edit')">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-expansion-panel-header>
+
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let contact of expense.contacts; let j = index">
+              <td><mat-icon>account_circle</mat-icon></td>
+              <td>{{ contact.username }}</td>
+              <td>
+                <mat-form-field class="split-amount">
+                  <input matInput [(ngModel)]="contact.splitAmount">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div>
+          <button class="add-contact-button" mat-icon-button (click)="openContactDialog(i)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </div>
+
+  <div class="add-buttons">
+    <button mat-raised-button color="primary" (click)="openExpenseDialog(expenses.length, 'create')">
+      <mat-icon>add</mat-icon>
+      <span>Add Expense</span>
+    </button>
+  </div>
+</div>

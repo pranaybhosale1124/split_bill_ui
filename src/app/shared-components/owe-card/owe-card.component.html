@@ -1,0 +1,19 @@
+<!-- app-owe-card.component.html -->
+
+<mat-card class="example-card">
+  <mat-card-content>
+    <p> {{ expense?.expense_users[0]?.user?.user_first_name }}</p>
+    <p>{{ expense?.expense_users[0]?.amount }}</p>
+    <p>{{ expense?.expense_name }}</p>
+    <!-- <mat-chip-list> -->
+    <div class="chip-container">
+      <mat-chip style="border-left: solid 1px; margin-left: -10px;"
+        *ngFor="let user of expense?.expense_users.slice(0,5);let i=index" [removable]="false">
+        <ng-container *ngIf="i<4;else moreUsers">{{ user?.user?.user_first_name?.charAt(0) ||
+          user?.user?.user_last_name?.charAt(0) }}</ng-container>
+        <ng-template #moreUsers>+{{expense?.expense_users?.length-4}}</ng-template>
+      </mat-chip>
+    </div>
+    <!-- </mat-chip-list> -->
+  </mat-card-content>
+</mat-card>

@@ -2,3 +2,38 @@
     display: block;
     text-align: center;
 }
+
+.owe-me-main{
+    scrollbar-width: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+app-owe-card{
+    margin: 1%;
+}
+
+.example-card {
+    width: 30%;
+    min-width: 200px;
+    margin: 1%;
+    display: inline-block;
+}
+
+.example-card:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title{
+    text-align: left;
+}
+
+.chip-container{
+    margin-left: 10px;
+    // background-color: red;
+}

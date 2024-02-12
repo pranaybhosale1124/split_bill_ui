@@ -1,9 +1,9 @@
 <div class="main-container">
     <div class="parent-borders">
         <div class="cards-container">
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
+            <app-card [icon]="'account_balance_wallet'" [text]="'Wallet'"></app-card>
+            <app-card [icon]="'emoji_events'" [text]="'Rewards'"></app-card>
+            <app-card [icon]="'card_giftcard'" [text]="'Refer'"></app-card>
         </div>
     </div>
     <!--  -->
@@ -28,7 +28,7 @@
                         <td>$500.00</td>
                         <td>
                             <mat-icon class="text-primary">edit</mat-icon>
-                            <mat-icon class="text-danger">delete</mat-icon>
+                            <!-- <mat-icon class="text-danger">delete</mat-icon> -->
                         </td>
                     </tr>
                     <tr>
@@ -38,7 +38,7 @@
                         <td>$750.00</td>
                         <td>
                             <mat-icon class="text-primary">edit</mat-icon>
-                            <mat-icon class="text-danger">delete</mat-icon>
+                            <!-- <mat-icon class="text-danger">delete</mat-icon> -->
                         </td>
                     </tr>
                     <!-- Add more rows as needed -->
@@ -50,10 +50,10 @@
     <div class="parent-borders">
         <mat-tab-group>
             <mat-tab label="Owe Me">
-                <app-owe-me></app-owe-me>
+                <div  class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
             </mat-tab>
             <mat-tab label="Owe To">
-                <app-owe-to></app-owe-to>
+                <div  class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
             </mat-tab>
         </mat-tab-group>
     </div>

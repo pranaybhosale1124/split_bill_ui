@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './shared-components/header/header.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { SidenavComponent } from './shared-components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -18,10 +18,18 @@ import { CardComponent } from './shared-components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatChipsModule} from '@angular/material/chips';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OweToComponent } from './dashboard/owe-to/owe-to.component';
 import { OweMeComponent } from './dashboard/owe-me/owe-me.component';
+import { ContactsComponent } from './shared-components/contacts-dialog/contacts.component';
+import { ExpenseInputsDialogComponent } from './shared-components/expense-inputs-dialog/expense-inputs-dialog.component';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
+import { HighlightSearchPipe } from './pipes/highlight.pipe';
+import { OweCardComponent } from './shared-components/owe-card/owe-card.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +39,20 @@ import { OweMeComponent } from './dashboard/owe-me/owe-me.component';
     CardComponent,
     DashboardComponent,
     OweToComponent,
-    OweMeComponent
+    OweMeComponent,
+    ContactsComponent,
+    ExpenseInputsDialogComponent,
+
+    // Pipes  & Directives
+    FilterPipe,
+    HighlightSearchPipe,
+    OweCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
 
     //local modules
     UserModule,
@@ -50,7 +66,9 @@ import { OweMeComponent } from './dashboard/owe-me/owe-me.component';
     MatIconModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

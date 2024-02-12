@@ -1,13 +1,9 @@
 <mat-card class="example-card">
     <mat-card-content>
-      <h5 class="title">Saurabh Chavan</h5>
-      <div class="amount title">
-        <span>Amount: $500</span>
-      </div>  
+      <div class="display-icon">
+        <mat-icon style="width: 36px; height: 36px; font-size: 36px;">{{icon}}</mat-icon>
+      </div>
+      <div class="display-text">{{text}}</div>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>This Week</button>
-      <button mat-button>This Month</button>
-      <button mat-button>This Year</button>
-    </mat-card-actions>
+
   </mat-card>

@@ -1,0 +1,43 @@
+<!-- expense-show.component.html -->
+
+<div class="expense-show-container">
+    <mat-card *ngIf="expense">
+        <mat-card-subtitle class="expense-name">
+            {{ expense.expense_name }}
+            <button id="view-details" mat-button color="primary" (click)="viewBill(expense)">
+                View Bill
+            </button>
+        </mat-card-subtitle>
+        <mat-card-title>{{ expense.expense_total_amount | currency:"INR" }}</mat-card-title>
+
+
+        <!-- <p>Description: {{ expense.expense_description }}</p> -->
+
+        <mat-card class="user-card" *ngFor="let user of expense.expense_users">
+            <mat-card-content class="card-content">
+                <div class="user-info">
+                    <div class="profile-icon">
+                        <mat-icon>account_circle</mat-icon>
+                        <!-- Use the appropriate Angular Material icon for the profile -->
+                    </div>
+                    <div class="user-details">
+                        <div class="username">{{ user.user.user_name }}</div>
+                        <div class="contact">{{ user.user.user_contact_number | lowercase }}</div>
+                    </div>
+                </div>
+                <div class="amount">{{ user.amount | currency:"INR" }}
+                    <mat-icon *ngIf="user.transaction" class="text-success">check</mat-icon>
+                    <mat-icon *ngIf="!user.transaction" class="text-danger">notifications</mat-icon>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <button mat-raised-button color="primary">
+            <span>Remind All</span>
+            <mat-icon>notifications</mat-icon>
+        </button>
+    </mat-card>
+
+
+
+</div>

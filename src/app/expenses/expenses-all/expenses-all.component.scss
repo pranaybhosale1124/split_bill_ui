@@ -1,0 +1,28 @@
+/* expense-all.component.css */
+
+.group-card,
+.main {
+  margin: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: -webkit-fill-available;
+  flex-direction:column
+}
+
+.group-expense-card{
+  width: 100%;
+}
+
+.amount {
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.view-details-button{
+  float: right;
+}
+
+.expense-expansion-panel{
+  margin: 1%;
+}

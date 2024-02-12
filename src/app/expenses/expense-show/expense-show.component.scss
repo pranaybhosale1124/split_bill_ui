@@ -1,0 +1,72 @@
+mat-card {
+    width: 98%;
+    padding: 2%;
+}
+
+button {
+    align-self:self-end;
+    width: max-content; /* Make the button full width by default */
+  
+    /* Adjust the styles for larger screens */
+    @media (max-width: 500px) {
+      width: -webkit-fill-available; /* Set max-content width for larger screens */
+    }
+  }
+
+.expense-show-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: -webkit-fill-available;
+    flex-direction:column
+}
+
+/* Your component's styles, e.g., app.component.css or app.component.scss */
+
+.user-card {
+    margin: 10px; /* Add margin for spacing between cards */
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; /* Set a background color or use an image for the profile icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Add spacing between profile icon and user details */
+  }
+  
+  .profile-icon mat-icon {
+    font-size: 24px; /* Adjust the font size of the icon */
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .amount {
+    font-weight: bold;
+    margin-left: auto;
+  }
+  
+  .expense-name{
+    display: flex;
+    justify-content: space-evenly;
+
+    #view-details{
+      width: max-content;
+      margin-left: auto;
+    }
+  }
