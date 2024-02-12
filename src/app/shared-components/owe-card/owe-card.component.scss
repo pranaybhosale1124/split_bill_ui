@@ -1,24 +1,41 @@
+/* app-owe-card.component.css */
+
 .example-card {
     width: 30%;
     min-width: 200px;
     margin: 1%;
     display: inline-block;
-}
-
-.example-card:hover{
-    background-color: rgb(220, 220, 220);
-}
-
-.amount {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.title{
     text-align: left;
-}
-
-.chip-container{
+  }
+  
+  .example-card:hover{
+    background-color: rgb(220, 220, 220);
+  }
+  
+  .amount {
+    font-size: 20px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  .name {
+    font-size: 14px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  .expense-name {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  .title {
+    text-align: left;
+  }
+  
+  .chip-container {
     margin-left: 10px;
-    // background-color: red;
-}
+  }
+  
+  /* Add this line to improve readability of the chip container */
+  .chip-container mat-chip {
+    margin-right: 4px;
+  }
+  

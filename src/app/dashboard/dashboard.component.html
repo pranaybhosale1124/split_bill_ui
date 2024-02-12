@@ -6,6 +6,19 @@
             <app-card [icon]="'card_giftcard'" [text]="'Refer'"></app-card>
         </div>
     </div>
+
+    <!--  -->
+
+    <div class="parent-borders">
+        <mat-tab-group>
+            <mat-tab label="Owe Me">
+                <div class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
+            </mat-tab>
+            <mat-tab label="Owe To">
+                <div class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
     <!--  -->
     <div class="recent-items-container parent-borders">
         <h4>Recently Split Bills</h4>
@@ -45,16 +58,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <div class="parent-borders">
-        <mat-tab-group>
-            <mat-tab label="Owe Me">
-                <div  class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
-            </mat-tab>
-            <mat-tab label="Owe To">
-                <div  class="mat-owe-me-tab"><app-owe-me [expenses]="expenses"></app-owe-me></div>
-            </mat-tab>
-        </mat-tab-group>
     </div>
 </div>
